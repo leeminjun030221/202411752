@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="counter-output" >counter : 0</h1>
+    <button id="btn-inc"> Inc </button>
+    <button id="btn-dnc"> Dec </button>
+
+    <script>
+        var couterOutput = document.getElementById("counter-output")
+        var btnInc = document.getElementById("btn-inc");
+        var btnDnc = document.getElementById("btn-dnc");
+        var counter = 0 //변수 선언
+
+        btnInc.addEventListener('click',()=> {
+            console.log('click test' + counter)
+            counter = counter + 1
+            couterOutput.innerText = "counter :" + counter
+        })
+        btnDnc.addEventListener('click',()=> {
+            console.log('click test' + counter)
+            counter = counter - 1
+            couterOutput.innerText = "counter :" + counter
+        })
+    </script>
+    
+</body>
+</html>
