@@ -8,12 +8,12 @@
 <body>
     <h1 id="counter-output" >counter : 0</h1>
     <button id="btn-inc"> Inc </button>
-    <button id="btn-dnc"> Dec </button>
+    <button id="btn-dec"> Dec </button>
 
     <script>
         var couterOutput = document.getElementById("counter-output")
         var btnInc = document.getElementById("btn-inc");
-        var btnDnc = document.getElementById("btn-dnc");
+        var btnDec = document.getElementById("btn-dec");
         var counter = 0 //변수 선언
 
         btnInc.addEventListener('click',()=> {
@@ -21,7 +21,7 @@
             counter = counter + 1
             couterOutput.innerText = "counter :" + counter
         })
-        btnDnc.addEventListener('click',()=> {
+        btnDec.addEventListener('click',()=> {
             console.log('click test' + counter)
             counter = counter - 1
             couterOutput.innerText = "counter :" + counter
