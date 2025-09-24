@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> 숫자입력 </h1>
+    <div>
+        <input id="inp-num" type="number" value="0"/>
+        <button id="btn-ok"> ok </button>
+    </div>
+    <p id="output"> 선택한 번호 :</p>
+
+     <script>
+        var inpNum = document.getElementById("inp-num");
+        var btnOk = document.getElementById("btn-ok");
+        var output = document.getElementById("output");
+
+        btnOk.addEventListener('click', () => {
+            var num = parseInt(inpNum.value);
+
+            if (isNaN(num) || num < 1) {
+                output.textContent = "선택한 번호 : 유효한 숫자를 입력해주세요.";
+                return;
+            }
+
+            var result = "";
+            for (var i = 1; i <= num; i++) {
+                result += i + " ";
+            }
+
+            output.textContent = "선택한 번호 : " + result.trim();
+        });
+     </script>
+    
+</body>
+</html>
