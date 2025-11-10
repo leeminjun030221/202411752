@@ -1,0 +1,55 @@
+body {
+    display: flex;
+    background-color: blue;
+    margin: 100px;
+    padding: 0px;
+    color: white;
+    font-family: 'Ram';
+
+    align-items: center;
+    flex-direction: column;
+
+    height: 100vh;
+}
+
+@font-face {
+    font-family: 'Ram';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/Ramche.woff2') format('woff2');
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Yangjin';
+    src: url('https://cdn.jsdelivr.net/gh/supernovice-lab/font@0.9/yangjin.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+
+}
+
+
+.big-text {
+    font-size: 64px;
+    margin: 10px;
+}
+
+.mid-text {
+    font-size: 32px;
+    margin: 10px;
+}
+
+.small-text {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-family: 'Yangjin';
+  
+}
+
+.version-text {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-family: 'Yangjin';
+}
+
