@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>네이버 클론 페이지</title>
+<style>
+  @import url("./main.css");
+</style>
+</head>
+<body>
+<header>
+  <div class="header-left"> 
+    <button class="icon-btn" aria-label="메뉴 열기">≡</button>
+    <div class="logo" aria-label="네이버 홈">N</div>
+  </div>
+  <div class="search-container">
+    <input type="search" class="search-input" placeholder="네이버에서 검색" aria-label="검색어 입력" />
+    <button class="search-btn" aria-label="검색">
+      <svg viewBox="0 0 24 24"><path d="M21 20l-5.59-5.59A7.97 7.97 0 0016 10a8 8 0 10-8 8 7.97 7.97 0 004.41-1.59L20 21z"/></svg>
+    </button>
+  </div>
+  <div class="header-right">
+    <button class="nav-icon" aria-label="쪽지">✉️</button>
+    <button class="nav-icon" aria-label="알림">🔔</button>
+    <button class="nav-icon" aria-label="장바구니">🛒</button>
+  </div>
+</header>
+<main>
+  <div class="content">
+
+    <section class="news-stand" aria-label="뉴스 스탠드">
+      <h2>뉴스 스탠드</h2>
+      <div class="news-list">
+        <a href="link">연합뉴스</a> <!-- href는 링크가 있다면 해당 링크로 넘어가기 위해 사용-->
+        <a href="link">채널A</a>
+        <a href="link">문화일보</a>
+        <a href="link">한국경제</a>
+        <a href="link">뉴스1</a>
+        <a href="link">스포츠서울</a>
+        <a href="link">아이뉴스24</a>
+        <a href="link">머니투데이</a>
+        <a href="link">스탠드뉴스</a>
+      </div>
+    </section>
+
+    <section class="jju" aria-label="전주대학교">
+      <h2>전주대학교    </h2>
+      <div class="jju-items">
+        <div class="jju-item">
+          <img src="jjulogo.png" alt="전주대학교" />
+          <p>전주대학교</p>
+        </div>
+        <div class="jju-item">
+          <img src="cyber.png" alt="전주대학교 사이버캠퍼스" />
+          <p>사이버 캠퍼스</p>
+        </div>
+        <div class="jju-item">
+          <img src="jju-instar.png" alt="전주대학교 인스타" />
+          <p>전주대학교 인스타</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="recommend" aria-label="추천 콘텐츠">
+      <h2>추천 콘텐츠</h2>
+      <div class="recommend-list">
+        <div class="recommend-item">
+          <img src="https://via.placeholder.com/300x100" alt="추천 콘텐츠 1" />
+          <p>~~~~~</p>
+        </div>
+        <div class="recommend-item">
+          <img src="https://via.placeholder.com/300x100" alt="추천 콘텐츠 2" />
+          <p>~~~~~</p>
+        </div>
+        <div class="recommend-item">
+          <img src="https://via.placeholder.com/300x100" alt="추천 콘텐츠 3" />
+          <p>~~~~~~</p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+  <aside class="sidebar" aria-label="사이드바">
+    <div class="login-box" role="region" aria-labelledby="login-title">
+      <h3 id="login-title">네이버 로그인</h3>
+      <button class="login-btn">로그인</button>
+      <p><a href="#">아이디 찾기</a> · <a href="#">회원가입</a></p>
+    </div>
+
+    <div class="info-box" aria-label="광고 배너">
+      <h4>광고</h4>
+      <p>~~~~~~~~</p>
+    </div>
+
+    <div class="info-box" aria-label="날씨 정보">
+      <h4>날씨</h4>
+      <p>현재 7℃ 맑음</p>
+      <p>10시 12시 14시 ~</p>
+    </div>
+
+    <div class="info-box" aria-label="주가 정보">
+      <h4>주가</h4>
+      <p>~~~~~~~~</p>
+    </div>
+  </aside>
+</main>
+<footer>
+  네이버 (c) 2025 네이버
+</footer>
+<script type="module">
+    import main from './index.js'
+    main();
+</script>
+</body>
+</html>
