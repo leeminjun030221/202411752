@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day13 ex01  </title>
+    <style>
+        @import url('./main.css');
+    </style>
+</head>
+<body>
+
+    <header>
+        <div> version 1.0 </div>
+    </header>
+
+    <main id="main-menu" >
+        <div class="title" >Dungeon & Dragons</div>
+        <div class="menu-item" data-action="new" >New</div>
+        <div class="menu-item" data-action="load" >Load</div>
+        <div class="menu-item" data-action="option" >Option</div>
+        <div class="menu-item" data-action="credit" > Credit </div>
+    </main>
+
+    <main id="credit-screen" class="hide" >
+        <div class="credit-title">Credits</div>        
+        <div class="credit-item">Game Design: gbox3d</div>
+        <div class="credit-item">Programming: gbox3d</div>
+        <div class="credit-item">Art: </div>
+        <div class="back-button" data-action="back">Back to Main Menu</div>    
+    </main>
+
+
+
+    <footer>
+        <div>copyright jj.ac.kr</div>
+    </footer>
+
+    <script type="module">
+        import main from './index.js'
+        main();
+    </script>
+    
+</body>
+</html>
