@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>네이버 클론 페이지</title>
+  <style>
+    @import url("./main.css");
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-top-line">
+      <div class="header-left"> 
+        <button class="icon-btn theme-toggle-btn" aria-label="다크 모드 토글">🌙</button>
+        <a href="https://www.naver.com/" target="_blank" class="logo" aria-label="네이버 홈">N</a>
+      </div>
+      
+      <div class="header-right">
+        <a href="https://talks.naver.com/" target="_blank" class="nav-icon" aria-label="네이버톡">💬</a>
+        <a href="https://m.notify.naver.com" target="_blank" class="nav-icon" aria-label="알림">🔔</a>
+        <a href="https://m.shopping.naver.com/cart/products" target="_blank" class="nav-icon" aria-label="장바구니">🛒</a>
+      </div>
+    </div>
+
+    <!-- 헤더 중앙 영역: 검색창-->
+    <div class="search-container">
+      <!-- 둥근 형태의 검색창 -->
+      <div class="search-box">
+        <input type="search" class="search-input" placeholder="검색어를 입력해 주세요." aria-label="검색어 입력" />
+        <button class="search-btn" aria-label="검색">
+          <!-- 돋보기 아이콘 (SVG) -->
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- 검색창 하단 아이콘 -->
+      <div class="icon-list" role="list" aria-label="빠른 링크">
+        <a href="http://mail.naver.com" target="_blank" class="icon-item" role="listitem" aria-label="메일">
+          <img src="mail.png" alt="메일" />
+          <span>메일</span>
+        </a>
+        <a href="https://section.cafe.naver.com/ca-fe/home" target="_blank" class="icon-item" role="listitem" aria-label="카페">
+          <img src="cafe.png" alt="카페" />
+          <span>카페</span>
+        </a>
+        <a href="https://section.blog.naver.com/BlogHome.naver?directoryNo=0&currentPage=1&groupId=0" target="_blank" class="icon-item" role="listitem" aria-label="블로그">
+          <img src="blog.png" alt="블로그" />
+          <span>블로그</span>
+        </a>
+        <a href="https://shopping.naver.com/ns/home" target="_blank" class="icon-item" role="listitem" aria-label="스토어">
+          <img src="store.png" alt="스토어" />
+          <span>스토어</span>
+        </a>
+        <a href="https://news.naver.com/" target="_blank" class="icon-item" role="listitem" aria-label="뉴스">
+          <img src="nnew.png" alt="뉴스" />
+          <span>뉴스</span>
+        </a>
+        <a href="https://finance.naver.com/" target="_blank" class="icon-item" role="listitem" aria-label="증권">
+          <img src="finance.png" alt="증권" />
+          <span>증권</span>
+        </a>
+        <a href="https://land.naver.com/" target="_blank" class="icon-item" role="listitem" aria-label="부동산">
+          <img src="land.png" alt="부동산" />
+          <span>부동산</span>
+        </a>
+        <a href="https://map.naver.com/p/" target="_blank" class="icon-item" role="listitem" aria-label="지도">
+          <img src="map.png" alt="지도" />
+          <span>지도</span>
+        </a>
+        <a href="https://comic.naver.com/index" target="_blank" class="icon-item" role="listitem" aria-label="웹툰">
+          <img src="webtoon.png" alt="웹툰" />
+          <span>웹툰</span>
+        </a>
+        <a href="https://chzzk.naver.com/" target="_blank" class="icon-item" role="listitem" aria-label="치지직">
+          <img src="chzzk.png" alt="치지직" />
+          <span>치지직</span>
+        </a>
+        <a href="https://papago.naver.com/" target="_blank" class="icon-item" role="listitem" aria-label="파파고">
+          <img src="papago.png" alt="파파고" />
+          <span>파파고</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="content">
+      <!-- 뉴스 스탠드 -->
+      <section class="news-stand" aria-label="뉴스 스탠드">
+        <h2 class="news-title">
+          뉴스 스탠드
+          <div class="news-menu">
+            <button class="news-menu-btn active" data-news-type="general">종합</button>
+            <button class="news-menu-btn" data-news-type="sports">스포츠</button>
+            <button class="news-menu-btn" data-news-type="entertainment"> 엔터 </button>
+          </div>
+        </h2>
+
+        <div class="news-list news-list-general">
+          <a href="https://www.yna.co.kr/" target="_blank" class="news-item-card">
+            <img src="yonhap.png" alt="연합뉴스 썸네일" class="news-thumbnail" />
+            <span class="news-item-title">연합뉴스</span>
+          </a>
+          <a href="https://ichannela.com/" target="_blank" class="news-item-card">
+            <img src="chnA.png" alt="채널A 썸네일" class="news-thumbnail" />
+            <span class="news-item-title">채널A</span>
+          </a>
+          <a href="https://www.sisain.co.kr/" target="_blank" class="news-item-card">
+            <img src="sisa.png" alt="시사in 썸네일" class="news-thumbnail" />
+            <span class="news-item-title">시사 IN</span>
+          </a>
+          <a href="https://www.dailian.co.kr/" target="_blank" class="news-item-card">
+            <img src="dalian.png" alt="데일리안 썸네일" class="news-thumbnail" />
+            <span class="news-item-title">데일리안</span>
+          </a>
+          <a href="https://www.mydaily.co.kr/" target="_blank" class="news-item-card">
+            <img src="mydaily.png" alt="마이 데일리 썸네일" class="news-thumbnail" />
+            <span class="news-item-title">마이 데일리</span>
+          </a>
+          <a href="https://www.inews24.com/" target="_blank" class="news-item-card">
+            <img src="inews.png" alt="아이뉴스 썸네일" class="news-thumbnail" />
+            <span class="news-item-title">아이뉴스24</span>
+          </a>
+          <a href="https://www.segye.com/" target="_blank" class="news-item-card">
+            <img src="world.png" alt="세계일보 썸네일" class="news-thumbnail" />
+            <span class="news-item-title">세계일보</span>
+          </a>
+          <a href="https://www.asiatoday.co.kr/" target="_blank" class="news-item-card">
+            <img src="asia.png" alt="아시아투데이 썸네일" class="news-thumbnail" />
+            <span class="news-item-title">아시아투데이</span>
+          </a>
+          <a href="https://www.donga.com/" target="_blank" class="news-item-card">
+            <img src="dongailbo.png" alt="동아일보 썸네일" class="news-thumbnail" />
+            <span class="news-item-title">동아일보</span>
+          </a>
+          <a href="https://www.dt.co.kr/" target="_blank" class="news-item-card">
+            <img src="digt.png" alt="디지털타임스 썸네일" class="news-thumbnail"/>
+            <span class="news-item-title">디지털타임스</span>            
+          </a>
+        </div>
+
+        <div class="news-list news-list-sports" style="display: none;">
+          <a href="https://m.sports.naver.com/index" target="_blank" class="news-item-card">
+            <img src="naversports.png " alt="네이버스포츠 썸네일" class="news-thumbnail"/>
+            <span class="news-item-title">네이버스포츠</span>            
+          </a>
+          <a href="https://sports.daum.net/" target="_blank" class="news-item-card">
+            <img src="daum.png" alt="다음스포츠 썸네일" class="news-thumbnail"/>
+            <span class="news-item-title">다음스포츠</span>            
+          </a>
+          <a href="https://m.news.nate.com/spo" target="_blank" class="news-item-card">
+            <img src="nate.png" alt="네이트스포츠 썸네일" class="news-thumbnail"/>
+            <span class="news-item-title">네이트스포츠</span>            
+          </a>
+          <a href="https://www.spotvnews.co.kr/" target="_blank" class="news-item-card">
+            <img src="spoTV.png" alt="스포티비뉴스 썸네일" class="news-thumbnail"/>
+            <span class="news-item-title">스포티비뉴스</span>            
+          </a>
+          <a href="https://news.kbs.co.kr/news/pc/sports/sports.do#20251128&1" target="_blank" class="news-item-card">
+            <img src="kbs.png" alt="KBS스포츠 썸네일" class="news-thumbnail"/>
+            <span class="news-item-title">KBS스포츠</span>            
+          </a>
+          <a href="https://news.sbs.co.kr/news/newsSection.do?sectionType=09&plink=SNB&cooper=SBSNEWS" target="_blank" class="news-item-card">
+            <img src="sbs.png" alt="SBS스포츠 썸네일" class="news-thumbnail"/>
+            <span class="news-item-title">SBS스포츠</span>            
+          </a>
+          <a href="https://m.imbc.com/sports/" target="_blank" class="news-item-card">
+            <img src="mbc.png" alt="MBC스포츠 썸네일" class="news-thumbnail"/>
+            <span class="news-item-title">MBC스포츠</span>            
+          </a>
+          <a href="https://www.sportsseoul.com/" target="_blank" class="news-item-card">
+            <img src="sposeoul.png" alt="스포츠서울 썸네일" class="news-thumbnail"/>
+            <span class="news-item-title">스포츠서울</span>            
+          </a>
+          <a href="https://sports.khan.co.kr/" target="_blank" class="news-item-card">
+            <img src="sportskh.png" alt="스포츠경향 썸네일" class="news-thumbnail"/>
+            <span class="news-item-title">스포츠경향</span>            
+          </a>
+          <a href="https://isplus.com/" target="_blank" class="news-item-card">
+            <img src="issport.png" alt="일간스포츠 썸네일" class="news-thumbnail"/>
+            <span class="news-item-title">일간스포츠</span>            
+          </a>
+        </div>
+          
+          <div class="news-list news-list-entertainment" style="display: none;">
+            <a href="https://www.dispatch.co.kr/" target="_blank" class="news-item-card">
+            <img src="dispatch.png" alt="디스패치 썸네일" class="news-thumbnail"/>
+            <span class="news-item-title">디스패치</span>            
+          </a>
+          <a href="https://www.ize.co.kr/" target="_blank" class="news-item-card">
+            <img src="ize.png" alt="아이즈 썸네일" class="news-thumbnail"/>
+            <span class="news-item-title">아이즈</span>            
+          </a>
+          <a href="https://star.ohmynews.com/" target="_blank" class="news-item-card">
+            <img src="ohmystar.png" alt="오마이스타 썸네일" class="news-thumbnail"/>
+            <span class="news-item-title">오마이스타</span>            
+          </a>
+          <a href="https://www.tenasia.co.kr/" target="_blank" class="news-item-card">
+            <img src="10asia.png" alt="10아시아 썸네일" class="news-thumbnail"/>
+            <span class="news-item-title">10아시아</span>            
+          </a>
+          <a href="https://www.movist.com/" target="_blank" class="news-item-card">
+            <img src="movist.png" alt="무비스트 썸네일" class="news-thumbnail"/>
+            <span class="news-item-title">무비스트</span>            
+          </a>
+          <a href="https://cine21.com/" target="_blank" class="news-item-card">
+            <img src="Cine21.png" alt="씨네21 썸네일" class="news-thumbnail"/>
+            <span class="news-item-title">씨네21</span>            
+          </a>
+          <a href="https://www.maxmovie.com/" target="_blank" class="news-item-card">
+            <img src="maxmovie.png" alt="맥스무비 썸네일" class="news-thumbnail"/>
+            <span class="news-item-title">맥스무비</span>            
+          </a>
+          <a href="https://www.hanteonews.com/" target="_blank" class="news-item-card">
+            <img src="hanteo.png" alt="한터뉴스 썸네일" class="news-thumbnail"/>
+            <span class="news-item-title">한터뉴스</span>            
+          </a>
+          <a href="https://rollingstone.co.kr/" target="_blank" class="news-item-card">
+            <img src="Rolling_Stone.png" alt="롤링스톤 썸네일" class="news-thumbnail"/>
+            <span class="news-item-title">롤링스톤</span>            
+          </a>
+          <a href="https://izm.co.kr/" target="_blank" class="news-item-card">
+            <img src="izm.png" alt="이즘 썸네일" class="news-thumbnail"/>
+            <span class="news-item-title">이즘</span>            
+          </a> 
+        </div>
+      </section>
+
+      <!-- 전주대학교 -->
+      <section class="jju" aria-label="전주대학교">
+        <h2>전주대학교</h2>
+        <div class="jju-items">
+          <a href="https://www.jj.ac.kr/jj/index.do" target="_blank" rel="noopener noreferrer" class="jju-item">
+            <img src="jjulogo.png" alt="전주대학교" class="my-image" />
+            <p>전주대학교</p>
+          </a>
+          <a href="https://cyber.jj.ac.kr/" target="_blank" rel="noopener noreferrer" class="jju-item">
+            <img src="cyber.png" alt="사이버 캠퍼스" class="my-image" />
+            <p>전주대 사이버 캠퍼스</p>
+          </a>
+          <a href="https://instar.jj.ac.kr/" target="_blank" rel="noopener noreferrer" class="jju-item">
+            <img src="jju-instar.png" alt="전주대 인스타" class="my-image" />
+            <p>전주대 인스타</p>
+          </a>
+          <a href="https://onstar.jj.ac.kr/" target="_blank" rel="noopener noreferrer" class="jju-item">
+            <img src="jju-onstar.png" alt="전주대 온스타" class="my-image" />
+            <p>전주대 온스타</p>
+          </a>
+        </div>
+      </section>
+
+      <!-- 추천 -->
+      <section class="recommend" aria-label="추천">
+        <h2>추천</h2>
+        <div class="recommend-list">
+          <a href="https://www.youtube.com/" target="_blank" class="recommend-item">
+            <img src="youtube_logo.png" alt="유튜브" />
+            <span class="recommend-title">Youtube</span>
+          </a>
+          <a href="https://www.instagram.com/" target="_blank" class="recommend-item">
+            <img src="Instagram_logo.png" alt="Instagram" />
+            <span class="recommend-title">Instagram</span>
+          </a>
+          <a href="https://www.facebook.com/" target="_blank" class="recommend-item">
+            <img src="facebook-logo.png" alt="Facebook" />
+            <span class="recommend-title">Facebook</span>
+          </a>
+          <a href="https://www.google.com/" target="_blank" class="recommend-item">
+            <img src="google-logo.png" alt="Google" />
+            <span class="recommend-title">Google</span>
+          </a>
+          <a href="https://chatgpt.com/" target="_blank" class="recommend-item">
+            <img src="gpt_logo.png" alt="GPT" />
+            <span class="recommend-title">GPT</span>
+          </a>
+          <a href="https://gemini.google.com/app" target="_blank" class="recommend-item">
+            <img src="Gemini_logo.webp" alt="Gemini" />
+            <span class="recommend-title">Gemini</span>
+          </a>
+          <a href="https://grok.com/" target="_blank" class="recommend-item">
+            <img src="Grok_logo.png" alt="Grok" />
+            <span class="recommend-title">Grok</span>
+          </a>
+          <a href="https://www.perplexity.ai/" target="_blank" class="recommend-item">
+            <img src="perplexity_logo.png" alt="Perplexity" />
+            <span class="recommend-title">Perplexity</span>
+          </a>
+          <a href="https://www.netflix.com/" target="_blank" class="recommend-item">
+            <img src="netflix-logo.png" alt="Netflix" />
+            <span class="recommend-title">Netflix</span>
+          </a>
+          <a href="https://www.coupangplay.com/" target="_blank" class="recommend-item">
+            <img src="coupangplay_logo.png" alt="Coupangplay" />
+            <span class="recommend-title">Coupang play</span>
+          </a>
+          <a href="https://www.tving.com/" target="_blank" class="recommend-item">
+            <img src="tving_logo.png" alt="Tving" />
+            <span class="recommend-title">Tving</span>
+          </a>
+          <a href="https://www.wavve.com/" target="_blank" class="recommend-item">
+            <img src="wavve_logo.png" alt="Wavve" />
+            <span class="recommend-title">Wavve</span>
+          </a>
+          <a href="https://www.coupang.com/" target="_blank" class="recommend-item">
+            <img src="coupang_logo.png" alt="Coupang" />
+            <span class="recommend-title">Coupang</span>
+          </a>
+          <a href="https://aliexpress.com/" target="_blank" class="recommend-item">
+            <img src="aliexpress_logo.png" alt="Aliexpress" />
+            <span class="recommend-title">Aliexpress</span>
+          </a>
+          <a href="https://www.temu.com/" target="_blank" class="recommend-item">
+            <img src="temu_logo.png" alt="Temu" />
+            <span class="recommend-title">Temu</span>
+          </a>
+          <a href="https://www.gmarket.co.kr/" target="_blank" class="recommend-item">
+            <img src="gmarket_logo.png" alt="Gmarket" />
+            <span class="recommend-title">Gmarket</span>
+          </a>
+        </div>
+      </section>
+    </div>
+
+    <!-- 사이드바 영역 -->
+    <aside class="sidebar" aria-label="사이드바">
+      <div class="login-box" role="region" aria-labelledby="login-title">
+        <h3 id="login-title">네이버 로그인</h3>
+        <a href="https://nid.naver.com/nidlogin.login" target="_blank" class="login-btn" role="button">로그인</a>
+        <p>
+          <a href="https://nid.naver.com/account/find-id/profile?session=a1ff8899-30ce-4c6c-a8a3-ab14561f7443&lang=ko_KR" target="_blank">아이디 찾기</a>
+          ·
+          <a href="https://nid.naver.com/account/find-pw/id?lang=ko_KR" target="_blank">비밀번호 찾기</a>
+          ·
+          <a href="https://nid.naver.com/user2/join/agree?lang=ko_KR&realname=N" target="_blank">회원가입</a>
+        </p>
+      </div>
+
+      <div class="calendar-box info-box" aria-label="달력">
+        <h4>달력</h4>
+        <div class="calendar-header">
+          <button class="nav-btn prev-month" aria-label="이전 달">‹</button>
+          
+          <div class="calendar-selects">
+            <select id="year-select" aria-label="연도 선택"></select>
+            <select id="month-select" aria-label="월 선택"></select>
+          </div>
+
+          <button class="nav-btn next-month" aria-label="다음 달">›</button>
+        </div>
+        <div class="calendar-weekdays">
+          <span>일</span><span>월</span><span>화</span><span>수</span><span>목</span><span>금</span><span>토</span>
+        </div>
+        <div class="calendar-days">
+        </div>
+      </div>
+
+      <a href="https://weather.naver.com/" target="_blank" class="weather-box info-box" aria-label="네이버 날씨 페이지 바로가기">
+        <h4 class="weather-box-title">날씨</h4>
+        <div class="weather-display">
+          <p class="current-temp" aria-label="현재 기온"><span id="weather-temp">2.6</span>℃</p>
+          <p class="weather-description" aria-label="날씨 상태 및 위치">
+            <span id="weather-condition">맑음 ☀️</span>,   
+            <span id="weather-location">전주시 완산구</span>
+          </p>
+        </div>
+        <div class="weather-details" aria-label="미세먼지 및 습도 정보">
+          <p>미세먼지: <span id="weather-dust">보통</span></p>
+          <p>습도: <span id="weather-humidity">45%</span></p>
+        </div>
+      </a>
+
+      <div class="calculator-box info-box" aria-label="계산기">
+        <h4>계산기</h4>
+        <div id="calc-display" class="calculator-display">0</div>
+        <div class="calculator-buttons">
+          <!-- 1행 -->
+          <button class="calc-btn btn-clear">C</button>
+          <button class="calc-btn btn-operator" data-operator="/">/</button>
+          <button class="calc-btn btn-operator" data-operator="*">*</button>
+          <button class="calc-btn btn-operator" data-operator="-">-</button>
+
+          <!-- 2행 -->
+          <button class="calc-btn btn-number" data-number="7">7</button>
+          <button class="calc-btn btn-number" data-number="8">8</button>
+          <button class="calc-btn btn-number" data-number="9">9</button>
+          <button class="calc-btn btn-operator btn-plus" data-operator="+">+</button>
+
+          <!-- 3행 -->
+          <button class="calc-btn btn-number" data-number="4">4</button>
+          <button class="calc-btn btn-number" data-number="5">5</button>
+          <button class="calc-btn btn-number" data-number="6">6</button>
+
+          <!-- 4행 -->
+          <button class="calc-btn btn-number" data-number="1">1</button>
+          <button class="calc-btn btn-number" data-number="2">2</button>
+          <button class="calc-btn btn-number" data-number="3">3</button>
+          <button class="calc-btn btn-equals btn-equal" data-operator="=">=</button>
+
+          <!-- 5행 -->
+          <button class="calc-btn btn-number btn-zero" data-number="0">0</button>
+          <button class="calc-btn btn-number btn-decimal" data-number=".">.</button>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <footer>
+    (c) NAVER Corp.
+  </footer>
+
+  <script type="module">
+    import main from './index.js'
+    main();
+  </script>
+</body>
+</html>
