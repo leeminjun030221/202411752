@@ -1,0 +1,39 @@
+git 에 대해서 아는대로 설명하시오 ( checkout, commit ,push, pul )
+git checkout은 브랫치/커밋을 변경하는데 작업 위치를 이동시킨다고 볼 수 있다.
+git commit은 변경 내용 저장(버전 생성)
+git push는 로컬 변경을 원격 저장소에 업로드
+git pull 원격 저장소 변경을 로컬로 가져와 병합한다.
+
+git branch 에 대해서 설명하시오.
+새로운 기능 개발이나 버그 수정 등을 기존 코드(main/master)와 분리해서 진행할 수 있도록 해줍니다.
+
+git 의 pull request에 대해서 설명하시오.
+R은 코드 변경을 공유하고, 리뷰받고, 승인받아 병합하는 공식적인 절차입니다.
+
+github page만드는 법에 대해서 설명하세요.
+설정에 들어가서 브렌치를 메인 루트로 세이브하면 접속주소가 뜬다
+
+flex를 사용하여 화면 중앙에 문장(학번 이름)을 배치 하시오. (단 동적으로 화면에 반응해야함)
+test2
+1. display: flex
+페이지 전체(body)를 Flex 컨테이너로 설정
+2. justify-content: center
+수평 중앙 정렬
+3. align-items: center
+수직 중앙 정렬
+4. height: 100vh
+브라우저 화면의 **세로 전체 높이(100%)**를 의미 → 화면 크기에 따라 자동 반응
+5. 반응형 지원
+meta viewport + Flexbox 조합으로 모바일/PC 모두 중앙 유지
+
+flex에 대해서 최대한 상세 하게 설명하세요.
+display: flex;를 사용해 요소들을 가로/세로 방향으로 쉽게 배치·정렬하는 CSS 레이아웃 시스템이에요.
+핵심 개념
+•	flex-direction: 아이템 나열 방향 (row, column 등)
+•	justify-content: 가로축 정렬
+•	align-items: 세로축 정렬
+•	flex-wrap: 줄바꿈 여부
+•	flex: 아이템 크기 비율 조절
+
+css , html ,js  관계를 설명하세요.
+간단히 말해 HTML = 구조 / CSS = 디자인 / JS = 동작(인터랙션) 입
